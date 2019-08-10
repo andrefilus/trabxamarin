@@ -12,6 +12,9 @@ namespace Okra.Models
         [JsonProperty("steps")]
         public string Steps { get; set; }
 
+        [JsonProperty("category")]
+        public string Category { get; set; }
+
         [JsonProperty("picture_path")]
         public string PicturePath { get; set; }
 

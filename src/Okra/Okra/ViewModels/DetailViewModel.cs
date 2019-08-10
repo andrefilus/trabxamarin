@@ -55,6 +55,7 @@ namespace Okra.ViewModels
             }
             
             Title = recipe.Title;
+            Category = recipe.Category;
             Steps = recipe.Steps;
             Author = recipe.AuthorName;
             PictureAuthor = recipe.AuthorPath;
@@ -63,6 +64,7 @@ namespace Okra.ViewModels
 
         #region properties
         private string _favorite;
+        private string _category;
         private string _author;
         private string _steps;
         private string _pictureAuthor;
@@ -79,6 +81,12 @@ namespace Okra.ViewModels
         {
             get { return _title; }
             set { _title = value; OnPropertyChanged(); }
+        }
+
+        public string Category
+        {
+            get { return _category; }
+            set { _category = value; OnPropertyChanged(); }
         }
 
         public string Author
