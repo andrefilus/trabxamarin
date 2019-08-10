@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="{Binding Title}"
+             x:Class="Okra.Views.DetailPage">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+        <StackLayout Padding="5" Orientation="Vertical">
+            <Button Text="{Binding Favorite}" Command="{Binding AddCommand}" />
+            <Image 
+                    Source="{Binding PictureRecipe}"
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="200"/>
+
+            <Label Text="{Binding Steps}" FontSize="Small"/>
+
+            <Label Text="{Binding Author, StringFormat='Autor: {0}'}" FontSize="Medium" FontAttributes="Bold" TextColor="Black" Margin="0,10,0,0" />
+
+            <Image 
+                    Source="{Binding PictureAuthor}"
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="200"/>
+
+                <Label Text="Developed by André Henrique Filus" FontSize="Small" TextColor="LightGray" Margin="0,10,0,0"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
